@@ -51,42 +51,18 @@ public class ObstacleGenerator : MonoBehaviour
     {
         if (obstacle.transform.position.y == 0)
             TeleportTo(obstacle, 1);
-        else if (obstacle.transform.position.y == 6)
-            TeleportTo(obstacle, 5);
+        else if (obstacle.transform.position.y == 4)
+            TeleportTo(obstacle, 3);
     }
 
     private void DeactivateObstacle(GameObject obstacle)
     {
         if (obstacle.transform.position.y == 1)
             TeleportTo(obstacle, 0);
-        else if (obstacle.transform.position.y == 5)
-            TeleportTo(obstacle, 6);
+        else if (obstacle.transform.position.y == 3)
+            TeleportTo(obstacle, 4);
         obstacle.SetActive(false);
     }
-
-    //IEnumerator MoveObstacle(GameObject obstacle, float posY)
-    //{
-    //    if (obstacle.transform.position.y < posY)
-    //    {
-    //        for (float i = obstacle.transform.position.y; i < posY; i += 0.1f)
-    //        {
-    //            Vector3 newPos = obstacle.transform.position;
-    //            newPos.y = i;
-    //            obstacle.transform.position = newPos;
-    //            yield return new WaitForSeconds(_obstacleSpeed);
-    //        }
-    //    }
-    //    else if (obstacle.transform.position.y > posY)
-    //    {
-    //        for (float i = obstacle.transform.position.y; i > posY; i -= 0.1f)
-    //        {
-    //            Vector3 newPos = obstacle.transform.position;
-    //            newPos.y = i;
-    //            obstacle.transform.position = newPos;
-    //            yield return new WaitForSeconds(_obstacleSpeed);
-    //        }
-    //    }
-    //}
 
     private void TeleportTo(GameObject obstacle, float posY)
     {

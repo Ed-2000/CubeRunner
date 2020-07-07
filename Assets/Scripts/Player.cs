@@ -60,7 +60,7 @@ public class Player : MonoBehaviour
             case "up":
                 if (_onGround)
                 {
-                    newPos.y = 5f;
+                    newPos.y = 3f;
                     _onGround = !_onGround;
                 }
                 else
