@@ -43,6 +43,7 @@ public class Player : MonoBehaviour
         _body.SetActive(false);
         _destroyedBody.SetActive(true);
         DeadMenu.ActiveDeadMenu();
+        GameObject.Find("Buttons").SetActive(false);
     }
 
     public void Move(string direction)
